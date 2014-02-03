@@ -4,7 +4,7 @@
 <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Price in Cents</th>
+    <th>Price in Dollars</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,7 +13,7 @@
   <tr>
     <td><%= product.name %></td>
     <td><%= product.description %></td>
-    <td><%= product.price_in_cents %></td>
+    <td><%= product.formatted_price %></td>
     <td><%= link_to 'Show', product_path(product) %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product_path(product),
@@ -21,3 +21,4 @@
   </tr>
 <% end %>
 </table>
+

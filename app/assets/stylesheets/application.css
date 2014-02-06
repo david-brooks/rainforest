@@ -1,3 +1,7 @@
+/* MINI GRID */
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -11,3 +15,51 @@
  *= require_self
  *= require_tree .
  */
+
+
+header {
+	background: #444444;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+}
+
+header  a {
+	color: white;
+	text-decoration: none;
+}
+
+header > a:visited {
+	color: white;
+}
+
+header > a:hover {
+	color: #e8ffff;
+}
+
+header > #logo {
+	font-size: 3em;
+	float: left;
+}
+
+header > .menu {
+	margin: 10px;
+	float: right;
+	color: white;
+}
+
+header > .menu > p.or {
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+header > .menu > a {
+	font-size: 2em;
+}
+
+
+.product-photo-thumbnail {
+	width: 40px;
+}

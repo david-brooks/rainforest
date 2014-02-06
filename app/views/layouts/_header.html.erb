@@ -1,0 +1,19 @@
+<header>
+	<%= link_to 'Rainforest', '/', id: "logo" %>
+	
+	<div class="menu">
+	<% if signed_in? %>
+		<%= link_to "Log out", session_path("current"), :method => :delete %>
+	<% else %>
+		<%= link_to 'Sign up', new_user_path, class: "button" %>
+		<p class="or">or</p>
+		<%= link_to 'Log in', new_session_path, class: "button" %>
+	<% end %>
+	</div>
+
+</header>
+
+
+ <div id="header">
+    <p id="name">Rainforest</p>
+ 

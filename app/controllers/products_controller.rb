@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
 
-before_filter :ensure_logged_in, :only => [:show]
+before_filter :ensure_logged_in, except: [:index]
 	
 	def index
 		@products = Product.all
+		 @products = Product.search(params[:search])
 	end
 
 	def show
@@ -50,6 +51,6 @@ end
 
 private
 	def product_params
-		params.require(:product).permit(:name, :description, :price_in_cents)
+		params.require(:product).permit(:name, :description, :price_in_cents, :url)
 	end
 end
